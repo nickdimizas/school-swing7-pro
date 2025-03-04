@@ -21,14 +21,12 @@ public class LandingPage extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	/**
-	 * Create the frame.
-	 */
+
 	public LandingPage() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(LandingPage.class.getResource("/images/eduv2.png")));
-		setTitle("Ποιότητα στην εκπαίδευση");
+		setTitle("Ποιότητα στην Εκπαίδευση");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 787, 429);
+		setBounds(100, 100, 760, 464);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -37,7 +35,7 @@ public class LandingPage extends JFrame {
 		
 		JPanel header = new JPanel();
 		header.setBackground(new Color(0, 52, 117));
-		header.setBounds(0, 0, 778, 56);
+		header.setBounds(0, 0, 746, 56);
 		contentPane.add(header);
 		header.setLayout(null);
 		
@@ -48,12 +46,12 @@ public class LandingPage extends JFrame {
 		
 		JLabel lblAuthRequired = new JLabel("Απαιτείται ταυτοποίηση");
 		lblAuthRequired.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAuthRequired.setBounds(60, 81, 270, 40);
+		lblAuthRequired.setBounds(35, 79, 286, 56);
 		contentPane.add(lblAuthRequired);
 		
 		JLabel lblMustConnect = new JLabel("Για να προχωρήσετε πρέπει να συνδεθείτε");
 		lblMustConnect.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMustConnect.setBounds(60, 124, 289, 40);
+		lblMustConnect.setBounds(35, 146, 259, 42);
 		contentPane.add(lblMustConnect);
 		
 		JButton btnConnect = new JButton("Σύνδεση");
@@ -66,7 +64,7 @@ public class LandingPage extends JFrame {
 		btnConnect.setEnabled(false);
 		btnConnect.setForeground(new Color(255, 255, 255));
 		btnConnect.setBackground(new Color(0, 128, 0));
-		btnConnect.setBounds(60, 225, 126, 50);
+		btnConnect.setBounds(35, 241, 138, 48);
 		
 		JCheckBox privacyCheckBox = new JCheckBox("Δηλώνω ότι αποδέχομαι τη");
 		privacyCheckBox.addItemListener(new ItemListener() {
@@ -79,43 +77,43 @@ public class LandingPage extends JFrame {
 			}
 		});
 		privacyCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		privacyCheckBox.setBounds(60, 171, 177, 21);
+		privacyCheckBox.setBounds(35, 196, 200, 23);
 		contentPane.add(privacyCheckBox);
 		
 		JLabel lblPrivacy = new JLabel("Δήλωση Ιδιωτικότητας");
 		lblPrivacy.setForeground(new Color(0, 0, 255));
-		lblPrivacy.setBounds(260, 171, 177, 21);
+		lblPrivacy.setBounds(241, 196, 130, 23);
 		contentPane.add(lblPrivacy);
 		
 		
 		contentPane.add(btnConnect);
 		
 		JPanel footer = new JPanel();
-		footer.setBounds(0, 320, 778, 83);
+		footer.setBounds(0, 330, 746, 97);
 		contentPane.add(footer);
 		footer.setLayout(null);
 		
 		JLabel lblManual = new JLabel("Εγχειρίδιο Χρήσης");
 		lblManual.setForeground(new Color(0, 0, 255));
 		lblManual.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblManual.setBounds(92, 25, 112, 33);
+		lblManual.setBounds(68, 33, 112, 34);
 		footer.add(lblManual);
 		
 		JLabel lblQuestions = new JLabel("Συχνές Ερωτήσεις");
 		lblQuestions.setForeground(Color.BLUE);
 		lblQuestions.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblQuestions.setBounds(309, 25, 112, 33);
+		lblQuestions.setBounds(290, 33, 112, 34);
 		footer.add(lblQuestions);
 		
 		JLabel lblSupport = new JLabel("Υποστήριξη Πολιτών");
 		lblSupport.setForeground(Color.BLUE);
 		lblSupport.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblSupport.setBounds(526, 25, 132, 33);
+		lblSupport.setBounds(512, 33, 112, 34);
 		footer.add(lblSupport);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(0, 128, 255));
-		separator.setBounds(0, 2, 778, 1);
+		separator.setBounds(0, 2, 746, 1);
 		footer.add(separator);
 	}
 }

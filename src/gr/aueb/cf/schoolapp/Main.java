@@ -3,14 +3,14 @@ package gr.aueb.cf.schoolapp;
 import java.awt.EventQueue;
 
 public class Main {
-	private final static LandingPage landingPage = new LandingPage();
+	private static final LandingPage landingPage = new LandingPage();
 	private static final LoginPage loginPage = new LoginPage();
 	private static final Dashboard dashboard =  new Dashboard();
-
+	private static final ViewTeachersPage viewTeachersPage = new ViewTeachersPage();
+	private static final TeacherView teacherView = new TeacherView();
+	private static final UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage();
+	private static final InsertTeacherPage insertTeacherPage = new InsertTeacherPage();
 	
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -24,6 +24,18 @@ public class Main {
 					
 					dashboard.setVisible(false);
 					dashboard.setLocationRelativeTo(null);
+					
+					viewTeachersPage.setVisible(false);
+					viewTeachersPage.setLocationRelativeTo(null);
+					
+					insertTeacherPage.setVisible(false);
+					insertTeacherPage.setLocationRelativeTo(null);
+					
+					teacherView.setVisible(false);
+					teacherView.setLocationRelativeTo(null);
+					
+					updateTeacherPage.setVisible(false);
+					updateTeacherPage.setLocationRelativeTo(null);
 					
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,6 +54,22 @@ public class Main {
 
 	public static Dashboard getDashboard() {
 		return dashboard;
+	}
+
+	public static ViewTeachersPage getViewTeachersPage() {
+		return viewTeachersPage;
+	}
+
+	public static TeacherView getTeacherView() {
+		return teacherView;
+	}
+
+	public static UpdateTeacherPage getUpdateTeacherPage() {
+		return updateTeacherPage;
+	}
+
+	public static InsertTeacherPage getInsertTeacherPage() {
+		return insertTeacherPage;
 	}
 	
 	
